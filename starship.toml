@@ -1,0 +1,22 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory$git_branch$git_commit$git_status$git_state$git_metrics$cmd_duration$kubernetes
+$character"""
+
+add_newline = true
+
+[directory]
+truncation_length = 1
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[cmd_duration]
+show_notifications = true
+min_time_to_notify = 30_000
+
+[kubernetes]
+disabled = false
+format = '[$symbol$namespace]($style) '
+detect_folders = ['backend']
