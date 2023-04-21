@@ -1,0 +1,12 @@
+[push]
+	autoSetupRemote = true
+[alias]
+	co = checkout
+	st = status
+[user]
+	email = 2470703+MarcinWronecki@users.noreply.github.com
+	name = Marcin Wronecki
+[core]
+	editor = vim
+[init]
+	defaultBranch = master
