@@ -11,8 +11,8 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec_always --no-startup-id xset dpms 600 600 600
-exec_always --no-startup-id xset s 600 600
+exec_always --no-startup-id xset dpms 6000 6000 6000
+exec_always --no-startup-id xset s 6000 6000
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
@@ -154,11 +154,27 @@ bar {
 	mode dock
 	i3bar_command i3bar --transparency
         status_command i3status
+	bindsym button4 nop
+	bindsym button5 nop
 }
 
-default_border pixel 0
-default_floating_border pixel 0
-for_window [class="^.*"] border pixel 0
+exec --no-startup-id feh --no-fehbg --bg-fill ~/Pictures/background.jpg
+
+default_border pixel 1
+default_floating_border pixel 1
+for_window [class="^.*"] border pixel 1
+
+assign [class="google-chrome-beta"] 1
+exec --no-startup-id google-chrome-beta
+
+assign [class="pycharm"] 2
+exec --no-startup-id pycharm
+
+assign [class="Slack"] 3
+exec --no-startup-id slack
+
+assign [class="Spotify"] 4
+exec --no-startup-id spotify 4
 
 bindsym $mod+Home exec "nautilus"
 bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
