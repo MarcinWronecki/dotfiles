@@ -20,3 +20,6 @@ min_time_to_notify = 30_000
 disabled = false
 format = '[$symbol$namespace]($style) '
 detect_folders = ['backend']
+
+[status]
+disabled = false

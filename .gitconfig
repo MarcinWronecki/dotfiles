@@ -17,10 +17,28 @@
 	hyperlinks = true
 	line-numbers = true
 	navigate = true
-	syntax-theme = Monokai Extended
+	syntax-theme = Coldark-Dark
 [diff]
 	colorMoved = default
 [interactive]
 	diffFilter = delta --color-only
+	singleKey = true
 [merge]
 	conflictStyle = zdiff3
+	autoStash = true
+[branch]
+	sort = -committerdate
+[fetch]
+	prune = true
+[advice]
+	statusHints = false
+[stash]
+	showPatch = true
+[rebase]
+	autoStash = true
+	abbreviateCommands = true
+	autoSquash = true
+[pull]
+	rebase = true
+[rerere]
+	enabled = true

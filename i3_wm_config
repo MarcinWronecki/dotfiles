@@ -178,3 +178,4 @@ exec --no-startup-id spotify 4
 
 bindsym $mod+Home exec "nautilus"
 bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
+bindsym $mod+m move workspace to output left
